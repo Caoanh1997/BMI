@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Nhập chiều cao (m)" />
+
+                <EditText
+                    android:id="@+id/et2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:hint="Nhập cân nặng (kg)" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btresult"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="10"
+                android:onClick="result"
+                android:text="Xem kết quả"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="20"
+                android:background="@color/yellow"
+                android:gravity="center"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/im"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60"
+                android:src="@drawable/background" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
